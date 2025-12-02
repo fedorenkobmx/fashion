@@ -10,7 +10,6 @@ public class Primirka {
     @Column(name = "id_primirka")
     private int id_primirka;
 
-    // На діаграмі data_primirky — character varying, тому використовуємо String
     @Column(name = "data_primirky", length = 100)
     private String dataPrimirky;
 

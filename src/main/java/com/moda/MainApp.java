@@ -30,12 +30,12 @@ public class MainApp {
             Pokupets p5 = new Pokupets("Ірина Савчук", "Gold", "380991122334");
 
 
-            Odiah o1 = new Odiah("Сукня Luna", "90", "70", "95");
-            Odiah o2 = new Odiah("Костюм Noir", "98", "84", null);
-            Odiah o3 = new Odiah("Блуза Azure", "88", "72", null);
-            Odiah o4 = new Odiah("Пальто Élite", "86", "68", null);
-            Odiah o5 = new Odiah("Сорочка Sky", "90", "70", null);
-            Odiah o6 = new Odiah("Пальто Terra", "98", "84", null);
+            Odiah o1 = new Odiah("Сукня Luna", "груди:90; ", "талія:70; ", "бедра:95; ");
+            Odiah o2 = new Odiah("Костюм Noir", "груди:98; ", "талія:84; ", null);
+            Odiah o3 = new Odiah("Блуза Azure", "груди:88; ", "талія:72; ", null);
+            Odiah o4 = new Odiah("Пальто Élite", "груди:86; ", "талія:68; ", null);
+            Odiah o5 = new Odiah("Сорочка Sky", "груди:90; ", "талія:70; ", null);
+            Odiah o6 = new Odiah("Пальто Terra", "груди:98; ", "талія:84; ", null);
 
 
             Tkanina t1 = new Tkanina("шовк");
@@ -90,7 +90,7 @@ public class MainApp {
                         "a.nazva, " +                     
                         "pr.dataPrimirky, " +             
                         "o.model, " +                     
-                        "concat(coalesce(o.grudy,''), ';', coalesce(o.talia,''), coalesce(o.bedra,'')), " + // розміри
+                        "concat(coalesce(o.grudy,''), coalesce(o.talia,''), coalesce(o.bedra,'')), " + 
                         "t.nazva, " +                     
                         "p.rivenKlienta, " +              
                         "a.stazhKutyrie, " +             
@@ -104,7 +104,8 @@ public class MainApp {
                 ModalInfoDTO.class
             ).list();
 
-            System.out.println("Денормалізована таблиця (отримана через HQL):");
+            System.out.println("Денормалізована таблиця Мода (отримана через HQL):");
+            System.out.println("\tПокупець | Кутюрʼє | Дата примірки | Модель виробу | Розміри | Тканини | Рівень клієнта | Стаж кутюрʼє | Ательє адреса | Телефон ательє\r\n");
             result.forEach(System.out::println);
 
 
@@ -138,7 +139,9 @@ public class MainApp {
 
             List<Object[]> den = session.createNativeQuery("SELECT pokupets, kuturie, data_primirky, model_vyrobu, rozmiry, tkanini, riven_klienta, stazh_kutyrie, adres_atelie, telefon_atelie FROM denormalized").list();
 
-            System.out.println("Денормалізована таблиця у БД (denormalized):");
+            System.out.println("\n\tТаблиця Мода:");
+            System.out.println("\tПокупець | Кутюрʼє | Дата примірки | Модель виробу | Розміри | Тканини | Рівень клієнта | Стаж кутюрʼє | Ательє адреса | Телефон ательє\r\n" + //
+                                "");
             for (Object[] row : den) {
                 System.out.printf("%s | %s | %s | %s | %s | %s | %s | %s | %s | %s%n",
                         row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9]);
