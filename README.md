@@ -6,5 +6,5 @@
 <img width="1920" height="1020" alt="Знімок екрана 2025-11-09 153648" src="https://github.com/user-attachments/assets/6c90cb27-9574-45a0-98a3-239f2a2286e5" />
 <img width="1920" height="1020" alt="Знімок екрана 2025-11-09 153706" src="https://github.com/user-attachments/assets/4409a44c-4a0e-4b60-8262-ace818bb8ab1" />
 <img width="1920" height="1020" alt="Знімок екрана 2025-12-02 214027" src="https://github.com/user-attachments/assets/6784d9f5-6562-4014-a6c3-7f81a8718d80" />
+<img width="1920" height="1020" alt="Знімок екрана 2025-12-02 214057" src="https://github.com/user-attachments/assets/6b7b2304-42a1-40ae-b14e-19113ffb9e9a" />
 
-<img width="1920" height="1020" alt="Знімок екрана 2025-11-09 153803" src="https://github.com/user-attachments/assets/421eb6f2-2b55-47ca-9b8f-7706dbe27ffa" />
